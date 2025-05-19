@@ -4,21 +4,21 @@ def insertion_sort(arr):
     """
     # Iterate through the array starting from the second element
     for i in range(1, len(arr)):
-        key = arr[i]    # Current element to be sorted/positioned
+        current = arr[i]    # Current element to be sorted/positioned
         j = i - 1       # Index of the element before the current element being sorted
 
-        # Shift elements of arr[0..i-1] that are less than the current element to one position ahead
-        while j >= 0 and arr[j] < key:
-            arr[j + 1] = arr[j]
-            j -= 1
+        # Shift all the previous elements - arr[0..i-1] - that are less than the current element to one position ahead
+        while j >= 0 and arr[j] < current:
+            arr[j + 1] = arr[j]   # Move the element one position ahead
+            j -= 1                # Move to the previous element
 
-        arr[j + 1] = key
+        arr[j + 1] = current
 
 
 # Example
 if __name__ == "__main__":
     print("----- EXAMPLE 1 -----")
-    numbers = [5, 2, 9, 1, 5, 6]
+    numbers = [11, 14, 8, 19, 11, 16]
     print("Original array:", numbers)
     insertion_sort(numbers)
     print("Sorted array:", numbers)
