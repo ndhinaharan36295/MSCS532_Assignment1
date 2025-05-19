@@ -42,5 +42,7 @@ cd MSCS532_Assignment1
 
 Run the program using the command
 
-``` python3 insertion_sort.py ```
+``` 
+python3 insertion_sort.py 
+```
 
